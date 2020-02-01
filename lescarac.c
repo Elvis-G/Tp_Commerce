@@ -207,7 +207,7 @@ if (coffre == 0 && shop[0].quantite > 0 && inventaireVisuel[0].argent > shop[0].
 SetColor (3);
   scanf("%d", &coffre);
 SetColor (8);
-    if (coffre*shop[0].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[0].poids*coffre > inventaireVisuel[0].poidsMax || shop[0].quantite < shop[0].quantite*coffre) {
+    if (coffre*shop[0].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[0].poids*coffre > inventaireVisuel[0].poidsMax || shop[0].quantite < coffre) {
         SetColor (4);
         printf("\n%s\n", "La quantite demande est impossible ou vous n'avez pas assez d'argent/de place dans votre inventaire pour acheter autant de boucliers");
         SetColor (15);
@@ -241,7 +241,7 @@ SetColor (8);
 SetColor (3);
   scanf("%d", &coffre);
 SetColor (8);
-    if (coffre*shop[2].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[2].poids*coffre > inventaireVisuel[0].poidsMax || shop[2].quantite < shop[2].quantite*coffre) {
+    if (coffre*shop[2].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[2].poids*coffre > inventaireVisuel[0].poidsMax || shop[2].quantite < coffre) {
       SetColor (4);
       printf("\n%s\n", "La quantite demande est impossible ou vous n'avez pas assez d'argent/de place dans votre inventaire pour acheter autant de plastrons");
       SetColor (15);
@@ -258,7 +258,7 @@ SetColor (8);
 SetColor (3);
   scanf("%d", &coffre);
 SetColor (8);
-    if (coffre*shop[3].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[3].poids*coffre > inventaireVisuel[0].poidsMax || shop[3].quantite < shop[3].quantite*coffre) {
+    if (coffre*shop[3].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[3].poids*coffre > inventaireVisuel[0].poidsMax || shop[3].quantite < coffre) {
       SetColor (4);
       printf("\n%s\n", "La quantite demande est impossible ou vous n'avez pas assez d'argent/de place dans votre inventaire pour acheter autant de potions de soin");
       SetColor (15);
@@ -275,7 +275,7 @@ SetColor (8);
 SetColor (3);
   scanf("%d", &coffre);
 SetColor (8);
-    if (coffre*shop[4].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[4].poids*coffre > inventaireVisuel[0].poidsMax || shop[4].quantite < shop[4].quantite*coffre) {
+    if (coffre*shop[4].prix > inventaireVisuel[0].argent || inventaireVisuel[0].inventaire + coffre > inventaireVisuel[0].inventaireMax || inventaireVisuel[0].poids + shop[4].poids*coffre > inventaireVisuel[0].poidsMax || shop[4].quantite < coffre) {
       SetColor (4);
       printf("\n%s\n", "La quantite demande est impossible ou vous n'avez pas assez d'argent/de place dans votre inventaire pour acheter autant de potions de resurrection");
       SetColor (15);
