@@ -50,14 +50,24 @@ int coffre;
 int choixQuantite;
 char nomcoffre[20];
 
-Inventaire_t herosInventaire ={0, 10, 0, 25, 150, 1};
+int i;
+int j;
+
+char listTemp[30];
+int prixTemp;
+int quantiteTemp;
+int poidsTemp;
+int levelTemp;
+int duraTemp;
+
+Inventaire_t herosInventaire ={0, 20, 0, 25, 150, 1};
 
 Items_t bouclier ={"Bouclier", 30, 4, 3, 1, 100};
 Items_t epee ={"Epee", 50, 3, 5, 1, 100};
 Items_t plastron ={"Plastron", 40, 5, 2, 1, 100};
 Items_t potiondeSoin ={"Potion de Soin", 30, 1, 15, 1, 100};
 Items_t potiondeRez ={"Potion de Resurrection", 200, 1, 5, 1, 100};
-Items_t monItem ={"Mon Item", 0, 0, 0, 0, 100};
+Items_t monItem ={"A Item", 0, 0, 0, 0, 100};
 
 Items_t shop[6];
 shop[0] = bouclier;
@@ -80,6 +90,18 @@ slot[6].prix = slot[6].prix/5;
 
 Inventaire_t inventaireVisuel[1];
 inventaireVisuel[0] = herosInventaire;
+
+
+for (i = 0; i < 5; i++) {
+  for (j=i+1 ; j < 5; j++) {
+    if (strcmp(shop[i].nom, shop[j].nom) > 0) {
+strcpy(listTemp, shop[i].nom); prixTemp = shop[i].prix; poidsTemp = shop[i].poids; quantiteTemp = shop[i].quantite; levelTemp = shop[i].level;
+strcpy(shop[i].nom, shop[j].nom); shop[i].prix = shop[j].prix; shop[i].poids = shop[j].poids; shop[i].quantite = shop[j].quantite; shop[i].level = shop[j].level;
+strcpy(shop[j].nom, listTemp); shop[j].prix = prixTemp ; shop[j].poids = poidsTemp; shop[j].quantite = quantiteTemp; shop[j].level = levelTemp;
+    }
+  }
+}
+
 
 while (jeu == 0) {
 
